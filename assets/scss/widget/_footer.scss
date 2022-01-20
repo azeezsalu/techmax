@@ -1,0 +1,235 @@
+/*--
+/*  25.1 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Area
+.footer-widget-wrap {
+    padding-top: 190px;
+    padding-bottom: 70px;
+}
+
+// Footer Widget
+.footer-widget {
+    margin-top: 30px;
+
+    &.footer-widget-info {
+        background: #1f2428;
+        padding: 40px 30px;
+        border-radius: 5px;
+    }
+
+    &.footer-widget-1 {
+        padding-left: 30px;
+        @media #{$desktop-device} {
+            padding-left: 60px;
+        }
+        @media #{$tablet-device}{
+           padding-left: 0px;
+        }
+    }
+}
+// Widget Info
+.widget-info {
+    padding-top: 20px;
+
+    &  ul {
+        
+
+        & li {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin-top: 10px;
+    
+            & .info-icon {
+    
+                & i {
+                    display: inline-block;
+                    color: $primary;
+                    font-size: 18px;
+                    margin-right: 10px;
+                    margin-top: 2px;
+                }
+            }
+    
+            & .info-text {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: $heading-font;
+                font-weight: 600;
+                color: #c4c5c7;
+            }
+        }
+    }
+}
+ 
+ 
+// Widget Title
+.footer-widget {
+   & .footer-widget-title{
+        font-size: 20px;
+        font-family: $heading-font;
+        font-weight: 700;
+        color: $white;
+    }
+}
+
+
+// Widget About
+.widget-about{
+    
+}
+
+// Widget Link
+.widget-link{
+    padding-top: 22px;
+
+    & .link{
+        & li{
+            margin-top: 7px;
+
+            & a{
+                font-size: 14px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: $footer-text;
+                transition: $transition-default;
+             
+                &:hover {  
+                    color: $primary;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+// Home Style Two
+
+.footer-widget-wrap-2 {
+    padding-top: 80px;
+}
+// Widget Info-2
+.widget-info-2 {
+    &  ul {
+        
+
+        & li {
+    
+            & .info-icon {
+    
+                & i {
+                    color: $secondary-2;
+                }
+            }
+    
+            & .info-text {
+                color: #666666;
+                & a {
+                    &:hover {
+                        color: $secondary-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Widget Title-2
+.footer-widget-2 {
+    & .footer-widget-title{
+        color: $secondary-2;
+    }
+}
+
+// Widget Link-2
+.footer-widget-2 {
+    .widget-link{
+    
+        & .link{
+            & li{
+    
+                & a{
+                    color: #666666;
+                 
+                    &:hover {  
+                        color: $secondary-2;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Home Style Three
+
+.footer-widget-wrap-3 {
+    padding-top: 80px;
+}
+// Widget Info-3
+.widget-info-3 {
+    &  ul {
+        
+        & li {
+    
+            & .info-icon {
+    
+                & i {
+                    color: $primary-2;
+                }
+            }
+    
+            & .info-text {
+                color: #666666;
+
+                & a {
+
+                    &:hover {
+                        color: $primary-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Widget Title-3
+.footer-widget-3 {
+    & .footer-widget-title{
+        color: $primary-2;
+    }
+}
+
+// Widget Link-3
+.footer-widget-3 {
+    .widget-link{
+    
+        & .link{
+            & li{
+    
+                & a{
+                    color: #666666;
+                 
+                    &:hover {  
+                        color: $primary-2;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Home Style Four
+
+.footer-widget-wrap-3 {
+    padding-top: 290px;
+    @media #{$large-mobile} {
+        padding-top: 270px;
+    }
+}
+

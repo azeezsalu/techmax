@@ -1,0 +1,260 @@
+/*--
+/*  17 - Blog Standard CSS
+/*----------------------------------------*/
+
+// Blog Standard Wrap
+.blog-standard-wrap {
+    margin-top: -70px;
+
+    & .blog-post-wrap {
+
+        & .pagination {
+            margin-top: 55px;
+        }
+    }
+}
+
+// Single Blog Post
+.single-blog-post {
+    margin-top: 70px;
+}
+
+// Blog Sidebar
+.blog-sidebar {
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 70px;
+    margin-left: 65px;
+    position: sticky;
+    top: 0;
+    @media #{$desktop-device}{
+        margin-left: 15px;
+    }
+    @media #{$tablet-device}{
+        margin-left: 0px;
+    }
+
+    & .sidebar-widget-1 {
+        margin-top: 0;
+    }
+}
+
+// Search Form 
+.sidebar-widget {
+    margin-top: 45px;
+    
+    & .search-form {
+        position: relative;
+        & input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 0;
+            border: 0;
+            padding-right: 35px;
+            background: #f8fafb;
+            color: #415674;
+            font-weight: 700;
+            outline: none;
+            overflow: hidden;
+            @include placeholder{
+                opacity: 0.95;
+                font-size: 14px;
+                font-family: $heading-font;
+                color: #898c94;
+                font-weight: 400;
+            }
+        }
+        & button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: transparent;
+            border: 0;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #111111;
+            transition: $transition-default;
+
+            &:hover {
+                background: $primary;
+                color: $white;
+            }
+        }
+    }
+}
+
+// Sidebar Widget Title
+.sidebar-widget {
+
+    & .widget-title {
+        margin-bottom: 25px; 
+
+        & .title {
+            font-size: 18px;
+            font-family: $heading-font;
+            font-weight: 700;
+            color: $heading-color1;
+            display: inline-block;
+        }
+    }
+}
+
+// Sidebar Recent Post
+.sidebar-widget {
+
+    & .recent-posts {
+
+        & ul {
+    
+            & li {
+                margin-top: 30px;
+                
+                &:first-child {
+                    margin-top: 0;
+                }
+                & .post-link {
+                    display: flex;
+                    align-items: center;
+    
+                    & .post-thumb {
+                        margin-right: 20px;
+    
+                        & img {
+                            min-width: 70px;
+                            height: 70px;
+                            border-radius: 10px;
+                            image-rendering: crisp-edges;
+                        }
+                    }
+    
+                    & .post-text {
+    
+                        & .title {
+                            font-size: 14px;
+                            line-height: 16px;
+                            font-family: $heading-font;
+                            font-weight: 600;
+                            transition: $transition-default;
+                        }
+    
+                        & .post-meta {
+                            font-size: 12px;
+                            font-family: $heading-font;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #838383;
+                            display: inline-block;
+                            margin-top: 5px;
+
+                            & i {
+                                color: $primary;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+    
+                    &:hover {
+    
+                        & .post-text {
+    
+                            & .title {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// Sidebar Widget Category
+.sidebar-widget {
+
+    & .category {
+        
+        & .cate-item {
+            margin-top: 15px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+            & a {
+                display: flex;
+                font-size: 14px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: #29303c;
+                transition: $transition-default;
+
+                & i {
+                    font-size: 10px;
+                    line-height: 24px;
+                    color: $primary;
+                    margin-right: 5px;
+                }
+                & .post-count {
+                    margin-left: auto;
+                    align-items: flex-start;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: #e4f2f8;
+                    font-size: 14px;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                    color: $primary;
+                    transition: $transition-default;
+                }
+
+                &:hover {
+                    color: $primary;
+
+                    & .post-count {
+                        background: $primary;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Sidebar Widget Tag
+.sidebar-widget {
+
+    & .sidebar-tag {
+
+        & li {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 4px;
+
+            & a {
+                display: inline-block;
+                border-radius: 5px;
+                padding: 8px 15px;
+                font-size: 14px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: #666666;
+                line-height: 18px;
+                background: #f9f9f9;
+                transition: $transition-default;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $white;      
+                }
+            }
+        }
+    }
+}
+ 

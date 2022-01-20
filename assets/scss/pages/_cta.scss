@@ -1,0 +1,282 @@
+/*--
+/*  14 - CTA CSS
+/*----------------------------------------*/
+
+.cta-section {
+
+    & .cta-wrap {
+        background: $primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
+        padding: 75px 125px 80px 110px;
+        margin-bottom: -110px;
+        position: relative;
+        z-index: 5;
+        & .cta-left {
+
+            & .title {
+                font-size: 36px;
+                line-height: 44px;
+                color: $white;
+            }
+        }
+
+        & .cta-right {
+            text-align: right;
+
+            & .number {
+                font-size: 22px;
+                font-family: $heading-font;
+                font-weight: 700;
+                color: $white;
+            }
+            & .btn {
+                padding: 0 35px;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.cta-section {
+    @media #{$desktop-device} {
+        & .cta-wrap {
+            padding: 80px 55px;
+
+            & .cta-left {
+                & .title {
+                    font-size: 30px;
+                }
+            }
+
+            & .cta-right {
+
+                & .btn {
+                    margin-left: 15px;
+                }
+            }
+        }
+        
+    }
+    @media #{$tablet-device} {
+        & .cta-wrap {
+
+            & .cta-left {
+                text-align: center;
+            }
+
+            & .cta-right {
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+        
+    }
+    @media #{$small-mobile} {
+        & .cta-wrap {
+
+            & .cta-left {
+                & .title {
+                    font-size: 30px;
+                }
+            }
+
+            & .cta-right {
+
+                & .number {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                & .btn {
+                    margin-left: 0px;
+                }
+            }
+        }
+        
+    }
+    
+}
+
+// Home Style Two
+
+// Cta section-2
+.cta-section-2 {
+    background-image: linear-gradient( -48deg, rgb(84,214,235) 0%, rgb(3,92,221) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 240px;
+    padding-bottom: 90px;
+    @media #{$tablet-device} {
+        padding-top: 220px;
+        padding-bottom: 70px;
+    }
+    & .cta-wrap-2 {
+
+        & .cta-content {
+            @media #{$tablet-device} {
+                text-align: center;
+            }
+            & .title {
+                font-size: 36px;
+                line-height: 48px;
+                color: $white;
+                @media #{$large-mobile} {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        & .cta-btn {
+            text-align: right;
+            @media #{$desktop-device} {
+                text-align: center;
+            }
+            @media #{$tablet-device} {
+               margin-top: 35px;
+            }
+            & .btn {
+                padding: 0 45px;
+                margin-right: 15px;
+                @media #{$desktop-device} {
+                    padding: 0 35px;
+                    font-size: 16px;
+                }
+                @media #{$tablet-device} {
+                    margin-top: 15px;
+                }
+            }
+            & .btn-white {
+                color: $primary;
+                margin-right: 0;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Cta section-3
+.cta-section-3 {
+    background: #0b0820;
+    padding-bottom: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @media #{$desktop-device} {
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .cta-wrap-3 {
+        margin-top: -10px;
+        & .cta-content {
+
+            & .title {
+                font-size: 60px;
+                line-height: 72px;
+                color: $white;
+                @media #{$laptop-device} {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+                @media #{$desktop-device} {
+                    font-size: 45px;
+                    line-height: 55px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 28px;
+                    line-height: 36px;
+                }
+            }
+            & p {
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $heading-font;
+                font-weight: 600;
+                color: $white;
+                margin-top: 35px;
+                @media #{$large-mobile} {
+                    font-size: 15px;
+                    margin-top: 25px;
+                }
+
+                & a {
+                    font-weight: 700;
+                    color: $primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Home Style Five
+
+.cta-section-4 {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: #09091d;
+    padding-bottom: 100px;
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .cta-wrap {
+
+        & .cta-left {
+            display: flex;
+            padding-right: 65px;
+            @media #{$laptop-device} {
+                padding-right: 0;
+            }
+            @media #{$small-mobile} {
+                display: block;
+                text-align: center;
+            }
+
+            & .title {
+                font-size: 36px;
+                line-height: 44px;
+                color: $white;
+                margin-left: 40px;
+                @media #{$desktop-device} {
+                    font-size: 32px;
+                    margin-left: 30px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+                @media #{$small-mobile} {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+        & .cta-right {
+            @media #{$tablet-device} {
+                margin-top: 40px;
+            }
+            & .title {
+                font-size: 22px;
+                color: $white;
+            }
+            & .btn {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+  

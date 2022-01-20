@@ -1,0 +1,103 @@
+/*--
+/*  21 - Subscribe CSS
+/*----------------------------------------*/
+
+  
+.subscribe-section {
+
+    & .subscribe-wrap {
+        background: linear-gradient( -60deg, rgb(84,214,235) 0%, rgb(3,92,221) 100%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 115px 50px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: -210px;
+        @media #{$desktop-device} {
+            padding: 90px 50px;
+        }
+        @media #{$small-mobile} {
+            padding: 50px;
+        }
+        & .subscribe-title {
+            margin-bottom: 40px;
+            & .title {
+                font-size: 36px;
+                line-height: 40px;
+                color: $white;
+                @media #{$small-mobile} {
+                    font-size: 30px;
+                }
+            }
+            & p {
+                font-size: 20px;
+                line-height: 30px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: $white;
+                margin-top: 10px;
+                @media #{$small-mobile} {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        & form {
+            position: relative;
+
+            & input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+                height: 60px;
+                line-height: 60px;
+                border: 0;
+                padding-right: 170px;
+
+                @include placeholder{
+                    opacity: 0.95;
+                    font-size: 18px;
+                    color: #93a1a2;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                }
+                @media #{$large-mobile} {
+                    height: 50px;
+                    line-height: 50px;
+                }
+                @media #{$small-mobile} {
+                    padding-right: 20px;
+                    @include placeholder{
+                        font-size: 16px;
+                    }
+                }
+            }
+            & button {
+                height: 60px;
+                position: absolute; 
+                right: 0;
+                top: 0;
+                border: 0;
+                background: $primary;
+                color: $white;
+                padding: 0 40px;
+                font-size: 16px;
+                font-family: $heading-font;
+                font-weight: 700;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                @media #{$large-mobile} {
+                    height: 50px;
+                    line-height: 50px;
+                }
+                @media #{$small-mobile} {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    margin-top: 15px;
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                }
+            }
+        }
+    }
+}

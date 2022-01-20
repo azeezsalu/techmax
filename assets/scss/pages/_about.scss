@@ -1,0 +1,884 @@
+/*--
+/*  05 - About CSS
+/*----------------------------------------*/
+
+.about-section {
+    overflow: hidden;
+    & .about-wrap {
+
+        & .about-thumb-wrap {
+            position: relative;
+            padding-right: 40px;
+            & .about-thumb-small {
+                border-radius: 5px;
+                position: absolute;
+                left: 0px;
+                top: 0;
+
+                & img {
+                    border-radius: 5px;
+                }
+            }
+
+            & .about-thumb-big {
+                text-align: right;
+                z-index: 1;
+                transform: translateY(135px) translateX(35px);
+
+                & img {
+                    border-radius: 5px;
+                }
+            }
+
+            & .about-thumb-shape {
+                position: absolute;
+                top: 235px;
+                left: 65px;
+                z-index: -1;
+            }
+
+            & .play-btn {
+                position: absolute;
+                right: -55px;
+                bottom: 8px;
+                & a {
+                    width: 105px;
+                    height: 105px;
+                    line-height: 105px;
+                    font-size: 15px;
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: 50%;
+                    background: $primary;
+                    color: $white;
+                    transition: $transition-default;
+
+                    &::before {
+                        content: "";
+                        border: 2px solid $white;
+                        position: absolute;
+                        z-index: 0;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        display: block;
+                        width: 215px;
+                        height: 215px;
+                        border-radius: 50%;
+                        animation: zoombig 3.25s linear infinite;
+                        animation-delay: .8s
+                    }
+                    &::after {
+                        content: "";
+                        border: 2px solid $white;
+                        position: absolute;
+                        z-index: 0;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        display: block;
+                        width: 215px;
+                        height: 215px;
+                        border-radius: 50%;
+                        animation: zoombig 3.25s linear infinite;
+                        animation-delay: 0s;
+                    }
+
+                    &:hover {
+                        background: $white;
+                        color: $primary;
+                        box-shadow: 0px 0px 98px 0px rgba(0, 0, 0, 0.07);
+                    }
+                }
+            }
+        }
+
+        & .about-content {
+            padding-left: 120px;
+            @media #{$laptop-device} {
+                padding-left: 80px;
+            }
+
+            & p {
+                font-size: 16px;
+                line-height: 30px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: $body-color;
+                margin-top: 25px;
+            }
+
+            & .about-author-list {
+                display: flex;
+                align-items: center;
+                padding-top: 15px;
+
+                & .about-author {
+                    background: $white;
+                    box-shadow: 0px 0px 62px 0px rgba(0, 0, 0, 0.08);
+                    padding: 35px 30px 35px 45px;
+                    border-radius: 5px;
+                    margin-right: 40px;
+                    margin-top: 25px;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        transform: translateX(-50%);
+                        background: $primary;
+                        height: 3px;
+                        width: calc(100% - 30px);
+                    }
+                    & img {
+
+                    }
+
+                    & .name {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $heading-color;
+                        margin-top: 10px;
+                    }
+
+                    & .designation {
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-family: $body-font;
+                        font-weight: 400;
+                        color: $body-color;
+                    }
+
+                    & .author-img {
+                        position: absolute;
+                        left: -25px;
+                        top: 35px;
+
+                        & img {
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                & .about-list {
+                    margin-top: 25px;
+                    & ul {
+
+                        & li {
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: $heading-font;
+                            font-weight: 700;
+                            color: $heading-color;
+
+                            & + li {
+                                margin-top: 15px;
+                            }
+                            & i {
+                                color: $primary;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+.about-section {
+
+    @media #{$desktop-device} {
+        & .about-wrap {
+
+            & .about-content {
+                padding-left: 64px;
+    
+                & .about-author-list {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+
+        & .about-wrap {
+
+            & .about-thumb-wrap {
+
+                & .play-btn {
+                    right: -40px;
+                    & a {
+                        width: 80px;
+                        height: 80px;
+                        line-height: 80px;
+    
+                        &::before {
+                            width: 180px;
+                            height: 180px;
+                        }
+                        &::after {
+                            width: 180px;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+            & .about-content {
+                padding-left: 0px;
+                margin-top: 200px;
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        padding-bottom: 0;
+        & .about-wrap {
+
+            & .about-thumb-wrap {
+                padding-right: 0;
+                & .about-thumb-small {
+                    position: inherit;
+                    text-align: center;
+                }
+    
+                & .about-thumb-big {
+                    transform: translateY(30px) translateX(0px);
+                    text-align: center;
+                }
+    
+                & .about-thumb-shape {
+                    display: none;
+                }
+    
+                & .play-btn {
+                    bottom: -65px;
+                    right: 130px;
+                }
+            }
+            & .about-content {
+                padding-left: 0px;
+                margin-top: 130px;
+    
+                & .about-author-list {
+                    display: block;
+    
+                    & .about-author {
+                        margin-right: 25px;
+                        margin-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes zoombig {
+    0% {
+        transform: translate(-50%,-50%) scale(0.5);
+        opacity: 1;
+        border-width: 3px;
+    }
+    40% {
+        opacity: .5;
+        border-width: 3px;
+    }
+    65% {
+        border-width: 2px;
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 0;
+        border-width: 2px;
+    }
+}
+
+// Home Style Two
+
+.about-section-2 {
+    background: #fafbff;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+
+    & .about-wrap-2 {
+
+        & .about-img {
+            text-align: center;
+            position: relative;
+            margin-top: 35px;
+
+            & img {
+                border-radius: 10px;
+            }
+            & .about-img-text {
+                text-align: left;
+                background: linear-gradient(-48deg, rgb(84,214,235) 0%, rgb(3,92,221) 100%);
+                position: absolute;
+                left: 0;
+                top: -35px;
+                padding: 90px 60px 65px;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+
+                & .number {
+                    font-size: 120px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 800;
+                    color: $white;
+                    display: block;
+                }
+                & .text {
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                    color: $white;
+                    display: block;
+                    margin-top: 55px;
+                }
+            }
+        }
+        & .about-content {
+            padding-left: 65px;
+            padding-right: 20px;
+            & .section-title2 {
+
+                & .title {
+                    font-size: 48px;
+                    line-height: 60px;
+                    font-weight: 700;
+                }
+            }
+            & .about-list {
+                padding-top: 40px;
+                & ul {
+
+                    & li {
+                        display: flex;
+                        align-items: flex-start;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $heading-color1;
+                        & .about-icon {
+                            color: $secondary-2;
+                            margin-right: 8px;
+                        }
+                        & + li {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+            & .about-btn {
+                margin-top: 60px;
+            }
+        }
+    }
+}
+
+.about-section-2 {
+    @media #{$desktop-device} {
+        & .about-wrap-2 {
+
+            & .about-img {
+                
+                & .about-img-text {
+                    padding: 75px 55px 55px;
+    
+                    & .number {
+                        font-size: 95px;
+                    }
+                    & .text {
+                        font-size: 22px;
+                        margin-top: 40px;
+                    }
+                }
+            }
+            & .about-content {
+                padding-left: 20px;
+                padding-right: 0px;
+                margin-top: 60px;
+                & .section-title2 {
+    
+                    & .title {
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .about-wrap-2 {
+
+            & .about-content {
+                padding-left: 0;
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        & .about-wrap-2 {
+
+            & .about-content {
+                
+                & .section-title2 {
+    
+                    & .title {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Home Style Three
+
+.about-section-3 {
+
+    & .about-wrap {
+
+        & .about-content-wrap {
+            margin-top: 70px;
+            & .about-thumb-wrap {
+                position: relative;
+                & .about-thumb-middle {
+                    position: relative;
+                    top: 75px;
+
+                    & img {
+                        border-radius: 10px;
+                    }
+                }
+                & .about-thumb-bottom {
+                    position: absolute;
+                    right: 95px;
+                    bottom: -45px;
+                    z-index: 1;
+                    & img {
+                        border-radius: 10px;
+                    }
+                }
+                & .about-thumb-small {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    & img {
+                        border-radius: 10px;
+                    }
+                }
+                & .about-thumb-shape {
+                    text-align: right;
+                    position: relative;
+                    top: -65px;
+                    right: 5px;
+                    z-index: -1;
+                }
+            }
+
+            & .about-content {
+                padding-left: 115px;
+                & .experience {
+                    display: flex;
+
+                    & .number {
+                        font-size: 180px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 800;
+                        color: $primary-2;
+                        margin-right: 10px;
+                    }
+                    & span {
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-family: $heading-font;
+                        font-weight: 600;
+                        color: $heading-color1;
+                        margin-top: 5px;
+                    }
+                }
+
+                & .title {
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: $heading-color1;
+                    margin-top: 40px;
+                }
+                &  p{
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                    color: #4c4d56;
+                    margin-top: 35px;
+                }
+            }
+
+            & .skill-bar-wrap {
+
+                & .skill-item {
+                    & .bar-inner {
+                
+                        & .progress-line {
+                            background: $primary-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-section-3 {
+
+    @media #{$desktop-device} {
+        & .about-wrap  {
+
+            & .about-content-wrap {
+                & .about-content {
+                    padding-left: 50px;
+                    & .experience {
+    
+                        & .number {
+                            font-size: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .about-wrap {
+            & .about-content-wrap {
+
+                & .about-thumb-wrap {
+                    position: relative;
+
+                    & .about-thumb-bottom {
+                        right: 140px;
+                    }
+                    & .about-thumb-small {
+                        right: 62px;
+                    }
+                    & .about-thumb-shape {
+                        right: 45px;
+                    }
+                }
+                & .about-content {
+                    padding-left: 0;
+                    margin-top: 140px;
+                }
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .about-wrap {
+
+            & .about-content-wrap {
+                margin-top: 50px;
+
+                & .about-thumb-wrap {
+                    & .about-thumb-middle {
+                        text-align: center;
+                        top: 0;
+    
+                        & img {
+                            width: 100%;
+                        }
+                    }
+                    & .about-thumb-bottom {
+                        display: none;
+                    }
+                    & .about-thumb-small {
+                        display: none;
+                    }
+                    & .about-thumb-shape {
+                        display: none;
+                    }
+                }
+                & .about-content {
+                    margin-top: 90px;
+            
+                    & .experience {
+    
+                        & .number {
+                            font-size: 120px;
+                        }
+                        & span {
+                            font-size: 16px;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Home Style Four
+
+.about-section-4 {
+    padding-bottom: 270px;
+    & .about-wrap {
+        
+        & .section-title {
+            max-width: 760px;
+        }
+        & .about-content-wrap {
+            margin-top: 65px;
+            & .about-thumb-wrap {
+
+                & .about-thumb-middle {
+                    top: 0;
+                }
+                & .about-thumb-bottom {
+                    bottom: -170px;
+                    right: 0;
+                }
+                & .about-thumb-small {
+                    top: 35px;
+                    right: 14px;
+                }
+                & .about-thumb-shape {
+                    top: -170px;
+                    right: 60px;
+                }
+            }
+            & .about-content {
+                & .about-author-list {
+
+                    & .about-list {
+                        margin-top: 25px;
+                        & ul {
+        
+                            & li {
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-family: $heading-font;
+                                font-weight: 700;
+                                color: $heading-color1;
+                                display: flex;
+        
+                                & + li {
+                                    margin-top: 15px;
+                                }
+                                & i {
+                                    color: $primary;
+                                    margin-right: 10px;
+                                    position: relative;
+                                    top: 4px;
+                                }
+                            }
+                        }
+                    }
+                    & .about-author {
+                        border-top: 1px solid #ebebeb;
+                        display: flex;
+                        margin-top: 45px;
+                        padding-top: 30px;
+    
+                        & .author-text {
+                            margin-right: 30px;
+                            & .name {
+                                color: $heading-color1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-section-4 {
+    @media #{$desktop-device} {
+        padding-bottom: 205px;
+
+        & .about-wrap {
+        
+            & .about-content-wrap {
+                margin-top: 10px;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+
+        & .about-wrap {
+        
+            & .about-content-wrap {
+                margin-top: 50px;
+        
+                & .about-content {
+                    margin-top: 220px;
+                }
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    @media #{$small-mobile} {
+        & .about-wrap {
+        
+            & .about-content-wrap {
+                & .about-content {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}
+// Home Style Five
+
+.about-section-5 {
+    padding-bottom: 320px;
+    background: #09091d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    & .about-wrap {
+
+        & .about-left {
+            padding-right: 105px;
+            & .section-title {
+
+                & .sub-title {
+                    color: $white;
+                }
+                & .title {
+                    color: $white;
+                }
+            }
+        }
+        & .about-right {
+            padding-right: 140px;
+            & p {
+                font-size: 16px;
+                line-height: 30px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: $white;
+            }
+            & .about-author {
+                display: flex;
+                margin-top: 50px;
+                & .author-img {
+
+                }
+                & .author-text {
+                    margin-left: 40px;
+                    & .name {
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: $white;
+                    }
+                    & .designation {
+                        font-size: 12px;
+                        line-height: 18px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-section-5 {
+    @media #{$desktop-device} {
+        padding-bottom: 235px;
+
+        & .about-wrap {
+
+            & .about-left {
+                padding-right: 0;
+            }
+            & .about-right {
+                padding-right: 0;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .about-wrap {
+
+            & .about-right {
+                margin-top: 35px;
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 195px;
+    }
+}
+
+// Home Style Six
+
+.about-section-6 {
+    padding-bottom: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    & .about-wrap {
+
+        & .about-left {
+            max-width: 460px;
+        }
+
+        & .about-right {
+            margin-top: 35px;
+            @media #{$tablet-device} {
+                margin-top: 65px;
+            }
+            & .about-experience-award {
+
+                & .single-item {
+                    display: flex;
+                    border-bottom: 1px solid #e1e1e1;
+                    padding-bottom: 40px;
+
+                    &:last-child {
+                        margin-top: 65px;
+                    }
+
+                    & .number {
+                        font-size: 120px;
+                        line-height: 30px;
+                        font-weight: 800;
+                        color: $primary;
+                        @media #{$desktop-device} {
+                            font-size: 90px;
+                        }
+                    }
+                    & span {
+                        font-size: 24px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: $heading-color1;
+                        margin-left: 25px;
+                        @media #{$desktop-device} {
+                            font-size: 20px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

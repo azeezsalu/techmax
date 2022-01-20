@@ -1,0 +1,195 @@
+/*--
+/*  10 - Team CSS
+/*----------------------------------------*/
+
+.team-section {
+
+    & .team-wrap {
+
+        & .team-content-wrap {
+            padding-top: 90px;
+            @media #{$desktop-device} {
+                padding-top: 70px;
+            }
+            @media #{$large-mobile} {
+                padding-top: 50px;
+            }
+            & .single-team {
+
+                & .team-img {
+
+                    & a {
+                        display: block;
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 90%;
+                            height: 430px;
+                            background-color: #0071dc;
+                            clip-path: polygon(0 34%, 0% 100%, 100% 100%);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: $transition-default;
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 480px;
+                            background-color: #0071dc;
+                            clip-path: polygon(0 34%, 0% 100%, 100% 100%);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: $transition-default;
+                        }
+                        
+                        & img {
+                            border-radius: 5px;
+                            width: 100%;
+                        }
+                    }
+                }
+                & .team-content {
+                    background: $white;
+                    padding: 30px;
+                    margin-top: -70px;
+                    position: relative;
+                    width: 290px;
+                    z-index: 1;
+                    @media #{$desktop-device} {
+                        width: 230px;
+                    }
+                    @media #{$tablet-device} {
+                        width: 270px;
+                    }
+
+                    & .team-social {
+                        position: absolute;
+                        top: 0;
+                        left: 25px;
+                        transform: translateY(-25px);
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: $transition-default;
+
+                        & .social {
+                            
+                            & li {
+                                display: inline-block;
+
+                                & + li {
+                                    margin-left: 10px;
+                                }
+
+                                & a {
+                                    font-size: 18px;
+                                    display: inline-block;
+                                    color: $white;
+                                    transform: translate3d(0, 0, 0);
+                                    transition: $transition-default;
+                                }
+                            }
+                        }
+                    }
+                    & .name {
+                        font-size: 22px;
+                        line-height: 28px;
+                        color: #231e32;
+                    }
+                    & .designation {
+                        font-size: 16px;
+                        line-height: 28px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: $primary;
+                    }
+                }
+
+                &:hover {
+                    & .team-img {
+                        & a {
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                            &::after {
+                                opacity: 0.35;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    & .team-content {
+                        & .team-social {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(-55px);
+
+                            & .social {
+
+                                & li {
+
+                                    & a {
+                                        &:hover {
+                                            transform: translateY(-5px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ // Team Bullet
+.team-active {
+    & .swiper-pagination {
+        position: relative;
+        margin-top: 30px;
+
+        & .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-repeat: 50%;
+            background: #e1e1e1;
+
+            &.swiper-pagination-bullet-active {
+                background: $primary;
+            }
+        }
+    }
+}
+
+// Our Team Section
+.our-tem-section {
+
+    & .our-team-wrap {
+        margin-top: -30px;
+        & .team-content-wrap {
+            padding-top: 0;
+            & .single-team {
+                margin-top: 30px;
+
+                & .team-content {
+                    width: 260px;
+                    @media #{$laptop-device} {
+                        margin-top: -60px;
+                        width: 230px;
+                    }
+                    @media #{$tablet-device} {
+                        width: 270px;
+                        margin-top: -70px;
+                    }
+                }
+            }
+        }
+    }
+}
+ 

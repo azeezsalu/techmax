@@ -1,0 +1,131 @@
+/*--
+/*  2.3 - Header Top CSS
+/*----------------------------------------*/
+
+// Offcanvas
+.offcanvas{
+    background: $secondary;
+    width: 320px;
+
+    @media #{$small-mobile}{
+        width: 280px;
+    }
+}
+
+// Offcanvas Header
+.offcanvas-header{
+
+    & .close-btn {
+        background: none;
+        border: 0;
+        font-size: 18px;
+        color: $white;
+        transition: $transition-default;
+
+        &:hover {
+            transform: rotate(90deg);
+            color: $primary;
+        }
+    }
+}
+
+// Offcanvas Logo
+.offcanvas-logo{
+    & a{
+        & img{
+            width: 130px;
+        }
+    }
+}
+
+// Offcanvas Body
+.offcanvas-body {
+
+}
+
+// Offcanvas Menu
+.offcanvas-menu{
+    padding: 30px 0;
+    & .main-menu{
+
+        & li{
+            position: relative;
+
+            & a{
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: $heading-font;
+                color: $white;
+                padding: 5px 0px;
+                position: relative;
+            }
+
+            & .menu-expand{
+                position: absolute;
+                right: 20px;
+                top: 14px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background: rgba(255,255,255,0.1);
+                border-radius: 3px;
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    background-color: $white;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: $transition-default;
+            
+                }
+                
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 2px;
+                    height: 16px;
+                    left: 50%;
+                    top: 50%;
+                    bottom: 0;
+                    background-color: $white;
+                    transform: translate(-50%, -50%);
+                    transition: $transition-default;
+                }
+
+            }
+
+            &:hover {
+                & > a {
+                    color: $primary;
+                }
+            }
+
+            &.active {
+
+                & > .menu-expand {
+
+                    &::after {
+                        height: 0;
+                    }
+                }
+            }
+
+            & ul{
+                padding-left: 6%;
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

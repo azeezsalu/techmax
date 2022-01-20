@@ -1,0 +1,175 @@
+/*--
+/*  22 - FAQ CSS
+/*----------------------------------------*/
+
+.faq-section {
+    padding-bottom: 120px;
+    @media #{$desktop-device} {
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .faq-wrap {
+
+        & .faq-left {
+            display: flex;
+
+            & .title {
+                font-size: 48px;
+                line-height: 60px;
+                max-width: 250px;
+                color: $heading-color1;
+                margin-left: 40px;
+                @media #{$desktop-device} {
+                    font-size: 40px;
+                    line-height: 55px;
+                    margin-left: 30px;
+                }
+                @media #{$small-mobile} {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        & .faq-accordion {
+            padding-left: 85px;
+            @media #{$desktop-device} {
+                padding-left: 0;
+            }
+            @media #{$tablet-device} {
+                margin-top: 50px;
+            }
+            & .accordion-item {
+                border: 0;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #e5e5e5;
+
+                &:first-of-type {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    & .accordion-button {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+
+                & .accordion-header {
+                    padding-top: 20px;
+                    padding-bottom: 30px;
+
+                    &.header-one {
+                        padding-top: 0;
+                    }
+
+                    & .accordion-button {
+                        padding: 0;
+                        font-size: 22px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        color: $heading-color1;
+                        font-weight: 700;
+                        padding-right: 45px;
+                        position: relative;
+                        transition: $transition-default;
+
+                        &::after{
+                            display: none;    
+                        }
+
+                        & .number {
+                            font-size: 18px;
+                            font-family: $heading-font;
+                            font-weight: 700;
+                            color: $heading-color1;
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            background: #f2f2f2;
+                            border-radius: 50%;
+                            margin-right: 20px;
+                        }
+
+                        & .faq-button {
+                            position: absolute;
+                            right: 0;
+                            height: 32px;
+                            width: 32px;
+                            color: $primary;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            transform: rotate(90deg);
+                            transition: $transition-default;
+
+                            & i {
+                                font-size: 15px;
+                            }
+                        }
+
+                        &:focus {
+                            border: 0;
+                            box-shadow: none;
+                        }
+            
+                        &:not(.collapsed) {
+                            color: $primary;
+                            background: $white;
+                            box-shadow: none;
+
+                            & .faq-button {
+                                position: absolute;
+                                right: 0;
+                                height: 32px;
+                                width: 32px;
+                                color: $primary;
+                                text-align: center;
+                                transform: rotate(-90deg);
+                                transition: $transition-default;
+            
+                                & i {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                
+
+                & .accordion-body {
+                    padding: 0;
+                    padding-bottom: 20px;
+                    padding-right: 50px;
+
+                    & p {
+                        font-size: 16px;
+                        line-height: 30px;
+                        color: #4c4d56;
+                    }
+                }
+
+                &:hover {
+
+                    & .accordion-button {
+
+                        & .faq-button {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

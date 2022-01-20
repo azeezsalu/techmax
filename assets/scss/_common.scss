@@ -1,0 +1,436 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-size: 14px;
+    line-height: 1.75;
+    font-weight: 400;
+    font-family: $body-font;
+    color: $body-color;
+    outline: none;
+    visibility: visible;
+    overflow-X: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: "";
+    &[dir="rtl"] {
+        text-align: right;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $heading-color;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+h1{
+    font-size: 36px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 30px;
+    }
+}
+h2{
+    font-size: 30px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 24px;
+    }
+}
+h3{
+    font-size: 24px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 20px;
+    }
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+h6 {
+    font-size: 14px;
+}
+p {
+    margin-bottom: 0;
+}
+a, button {
+    color: inherit;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button, img, input {
+    transition: $transition-default;
+    outline: 0;
+
+    &:focus{
+        outline: 0;
+    }
+}
+
+a:focus {
+    color: none;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $primary;
+}
+ul,ol{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+}
+
+input, textarea {
+    @include placeholder {
+        opacity: 1;
+    }
+}
+
+/*-- Common Classes --*/
+.section, 
+.main-wrapper {
+    float: left;
+    width: 100%;
+}
+
+
+
+
+/*--Section Spacing--*/
+.section-padding {
+    padding-top: 145px;
+    padding-bottom: 145px;
+
+    // Responsive
+    @media #{$desktop-device} {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.section-padding-02 {
+    padding-top: 145px;
+
+    // Responsive
+    @media #{$desktop-device} {
+        padding-top: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 60px;
+    }
+}
+.section-padding-03 {
+    padding-top: 120px;
+
+    // Responsive
+    @media #{$desktop-device} {
+        padding-top: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 60px;
+    }
+}
+ 
+
+/*--Section Title--*/
+.section-title{
+    max-width: 690px;
+    margin: 0 auto;
+    & .title{
+        font-size: 40px;
+        line-height: 54px;
+        font-family: $heading-font;
+        font-weight: 700;
+        color: $heading-color1;
+        @media #{$desktop-device} {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @media #{$large-mobile}{
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+    }
+
+    & .sub-title {
+        font-size: 14px;
+        line-height: 30px;
+        font-family: $heading-font;
+        font-weight: 800;
+        color: $primary;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    
+}
+
+/*--Section Title Two--*/
+.section-title2{
+    max-width: 690px;
+    margin: 0 auto;
+    & .title{
+        font-size: 48px;
+        line-height: 54px;
+        font-family: $heading-font;
+        font-weight: 800;
+        color: $heading-color1;
+        & span {
+            color: $primary;
+        }
+        @media #{$desktop-device} {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @media #{$large-mobile}{
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+    }
+
+    & .sub-title {
+        font-size: 12px;
+        line-height: 30px;
+        font-family: $heading-font;
+        font-weight: 800;
+        color: #a1a1a1;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    & p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: $heading-font;
+        font-weight: 600;
+        color: #4c4d56;
+        padding: 0 50px;
+        margin-top: 20px;
+    }
+    
+}
+
+/*--Section Title--*/
+.section-title3{
+    max-width: 925px;
+    margin: 0 auto;
+    & .title{
+        font-size: 48px;
+        line-height: 72px;
+        font-family: $heading-font;
+        font-weight: 700;
+        color: $heading-color1;
+        @media #{$desktop-device} {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @media #{$large-mobile}{
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+    }
+
+    & .sub-title {
+        font-size: 14px;
+        height: 40px;
+        line-height: 38px;
+        padding: 0 40px;
+        border-radius: 35px;
+        display: inline-block;
+        background: #ffeeeb;
+        font-family: $heading-font;
+        font-weight: 800;
+        color: $primary-2;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    
+}
+
+// Techmax Pagination
+.techmax-pagination {
+
+    & .pagination {
+
+        & .page-item {
+            margin: 0 3px;
+            & .page-link {
+                width: 35px;
+                height: 35px;
+                padding: 0;
+                line-height: 33px;
+                font-size: 14px;
+                font-family: $heading-font;
+                font-weight: 400;
+                text-align: center;
+                color: #6c7381;
+                border: 0;
+                background: transparent;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: $transition-default;
+                &:focus {
+                    box-shadow: none;
+                }
+
+                &:hover {
+                    background: $primary;
+                    color: $white;
+                }
+
+                & i {
+                    font-size: 12px;
+                }
+            }
+
+            &.active {
+                & .page-link {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+/*--Swiper Pagination--*/
+.swiper-pagination{
+    & .swiper-pagination-bullet {
+        border-radius: 50%;
+        background-color: $white;
+        width: 13px;
+        height: 13px;
+        transition: $transition-default;
+        opacity: 1;
+          
+        &.swiper-pagination-bullet-active{
+            background-color: #5abaf7;
+        }
+    }
+}
+
+/*--Swiper Bullet--*/
+.slider-bullet {
+
+   & .swiper-pagination {
+        position: relative;
+        margin-top: 30px;
+    
+        & .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-repeat: 50%;
+            background: #e1e1e1;
+    
+            &.swiper-pagination-bullet-active {
+                background: $primary;
+            }
+        }
+    }
+    
+}
+
+/*--  Preloader Styles  --*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+    z-index: 999999;
+
+    & .preloader {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        padding: 0px;
+        text-align: left;
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        & span {
+            position: absolute;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $primary;
+            animation: preloader 1.3s linear infinite;
+
+            &:last-child {
+                animation-delay: -0.8s;
+            }
+        }
+    }
+}
+
+@keyframes preloader {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}
+

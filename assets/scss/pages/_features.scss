@@ -1,0 +1,746 @@
+/*--
+/*  09 - Features CSS
+/*----------------------------------------*/
+
+// Features Section
+.features-section {
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+
+    & .features-thumb {
+        position: absolute;
+        left: 70px;
+        width: 45%;
+        height: 100%;
+        
+        & .shape-1 {
+            position: absolute;
+            left: 150px;
+            top: 85px;
+            padding: 0 20px;
+            z-index: -1;
+            animation: rotate-style 50s linear infinite;
+        }
+    }
+
+    & .features-wrap {
+        padding-top: 140px;
+        padding-bottom: 145px;
+        & .features-content-wrap {
+            padding-left: 110px;
+    
+            & .section-title {
+                margin-left: 0;
+            }
+    
+            & .features-content {
+                padding-top: 20px;
+                & ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    & .features-item {
+                        display: flex;
+                        width: 50%;
+                        margin-top: 35px;
+                        & .features-icon {
+    
+                        }
+                        & .features-text {
+                            flex: 1;
+                            margin-left: 35px;
+                            max-width: 220px;
+                            & .title {
+                                font-size: 22px;
+                                line-height: 30px;
+                                color: #231e32;
+                            }
+                            & p {
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-family: $heading-font;
+                                font-weight: 400;
+                                color: #4c4d56;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+    
+                & .features-link {
+    
+                    & p {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-family: $heading-font;
+                        font-weight: 600;
+                        color: #4c4d56;
+                        margin-top: 40px;
+    
+                        & a {
+                            color: $primary;
+                            font-weight: 700;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.features-section {
+    @media #{$laptop-device} {
+        & .features-thumb {
+            left: 25px;
+            & .shape-1 {
+                @media #{$laptop-device} {
+                    top: 205px;
+                }
+            }
+        }
+        & .features-wrap {
+            & .features-content-wrap {
+                padding-left: 90px;
+
+                & .features-content {
+                    & ul {
+                        & .features-item {
+                            & .features-text {
+                                margin-left: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$desktop-device} {     
+        & .features-thumb {
+            position: relative;
+            left: 0px;
+            width: 100%;
+            justify-content: center;
+
+            & .image {
+                padding-top: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+    
+            & .shape-1 {
+                left: 275px;
+                top: 150px;
+            }
+        }
+        & .features-wrap {
+            padding-top: 70px;
+            padding-bottom: 100px;
+            & .features-content-wrap {
+                padding-left: 0px;
+            }
+        }
+    }
+    @media #{$tablet-device} {     
+        & .features-thumb {
+
+            & .image {
+                padding-top: 100px;
+            }
+    
+            & .shape-1 {
+                left: 225px;
+                top: 150px;
+                & img {
+                    width: 520px;
+                }
+            }
+        }
+        & .features-wrap {
+            padding-top: 70px;
+            padding-bottom: 80px;
+        }
+    }
+    @media #{$large-mobile} {     
+        & .features-thumb {
+            & .image {
+                padding-top: 80px;
+            }
+    
+            & .shape-1 {
+                left: 160px;
+                top: 140px;
+                & img {
+                    width: 390px;
+                }
+            }
+        }
+        & .features-wrap {
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+    }
+    @media #{$small-mobile} {     
+        & .features-thumb {
+
+            & .image {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            & .shape-1 {
+                left: 110px;
+                top: 115px;
+                padding: 0 20px;
+            }
+        }
+        & .features-wrap {
+            & .features-content-wrap {
+        
+                & .features-content {
+                    padding-top: 20px;
+
+                    & ul {
+                        & .features-item {
+                            width: 100%;
+                            & .features-text {
+                                & .title {
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    color: #231e32;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate-style {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Home Style Two
+
+.features-section-2 {
+
+    & .features-wrap-2 {
+        margin-top: -10px;
+        .features-item-wrap {
+            border: 3px solid #e1e1e1;
+            border-radius: 10px;
+            padding: 70px 55px;
+            position: relative;
+            display: flex;
+            margin-top: 60px;
+
+            &::before {
+                content: "";
+                background: #e1e1e1;
+                width: 80%;
+                margin: auto;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+            }
+            & .features-item-box {
+                border-right: 1px solid #e1e1e1;
+                padding-right: 60px;
+                margin-right: 50px;
+
+                &.features-box-3 {
+                    border-right: 0;
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+                & .features-item {
+                    display: flex;
+
+                    &.features-2,
+                    &.features-4,
+                    &.features-6 {
+                        margin-top: 60px;
+                        padding-top: 60px;
+                    }
+                    & .features-icon {
+    
+                    }
+                    & .features-content {
+                        flex: 1;
+                        margin-left: 14px;
+    
+                        & .title {
+                            font-size: 22px;
+                            line-height: 30px;
+                            color: #231e32;
+                        }
+                        & p {
+                            font-size: 16px;
+                            line-height: 30px;
+                            font-family: $heading-font;
+                            font-weight: 400;
+                            color: #4c4d56;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.features-section-2 {
+    @media #{$desktop-device} {
+        & .features-wrap-2 {
+
+            .features-item-wrap {
+                padding: 60px 40px;
+    
+                & .features-item-box {
+                    padding-right: 20px;
+                    margin-right: 20px;
+    
+                    & .features-item {
+    
+                        & .features-content {
+                            margin-left: 8px;
+                            & .title {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        & .features-wrap-2 {
+
+            .features-item-wrap {
+                padding: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+    
+                &::before {
+                    display: none;
+                }
+                & .features-item-box {
+                    border-right: 0;
+                    padding-right: 0px;
+                    margin-right: 0px;
+    
+
+                    & .features-item {
+                        display: flex;
+                        margin-top: 30px;
+    
+                        &.features-1 {
+                            margin-top: 0;
+                        }
+                        &.features-2,
+                        &.features-4,
+                        &.features-6 {
+                            margin-top: 30px;
+                            padding-top: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .features-wrap-2 {
+
+            .features-item-wrap {
+                padding: 40px;
+    
+                & .features-item-box {
+    
+
+                    & .features-item {
+                        display: block;
+
+                        & .features-content {
+                            margin-top: 10px;
+                            margin-left: 0;
+        
+                            & .title {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
+// Features Section-3
+.features-section-3 {
+
+    & .features-wrap-3 {
+
+        & .features-content-wrap {
+            padding-top: 20px;
+            & .single-item {
+                border: 1px solid #ebebeb;
+                padding: 45px;
+                padding-bottom: 65px;
+                border-radius: 10px;
+                margin-top: 30px;
+                @media #{$large-mobile} {
+                    padding: 35px;
+                }
+                & .features-icon {
+
+                    & img {
+                        height: 50px;
+                    }
+                }
+                & .features-content {
+
+                    & .title {
+                        font-size: 22px;
+                        line-height: 30px;
+                        color: #231e32;
+                        margin-top: 20px;
+                    }
+                    & p {
+                        font-size: 16px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: #4c4d56;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Features Section-4
+.features-section-4 {
+
+    & .features-wrap-3 {
+
+        & .features-content-wrap {
+
+            & .single-item {
+                @media #{$large-mobile} {
+                    padding: 28px;
+                }
+                & .features-icon {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: -12px;
+                        top: 15px;
+                        width: 50px;
+                        height: 50px;
+                        background: #e5eefc;
+                        border-radius: 50%;
+                        z-index: -1;
+                    }
+                }
+
+                & .features-content {
+                    & .title {     
+                        margin-top: 45px;
+                        @media #{$large-mobile} {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Home Style Four
+.features-section-5 {
+
+    & .features-wrap-5 {
+        margin-bottom: -30px;
+        margin-top: -85px;
+        position: relative;
+        z-index: 1;
+        & .features-item {
+            display: flex;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 10px;
+            padding: 40px 50px;
+            margin-bottom: 30px;
+            @media #{$desktop-device} {
+                padding: 35px 30px;
+            }
+            @media #{$tablet-device} {
+                display: block;
+            }
+            @media #{$large-mobile} {
+                text-align: center;
+            }
+
+            & .features-icon {
+
+            }
+            & .features-text {
+                flex: 1;
+                margin-left: 25px;
+                @media #{$desktop-device} {
+                    margin-left: 20px;
+                }
+                @media #{$tablet-device} {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+                & .title {
+                    font-size: 22px;
+                    line-height: 30px;
+                    color: $white;
+                    @media #{$tablet-device} {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Features Section-6
+.features-section-6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    & .features-wrap-3 {
+
+        & .section-title2 {
+            margin: 0;
+            @media #{$tablet-device} {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        & .features-6-btn {
+            text-align: right;
+            @media #{$tablet-device} {
+                text-align: center;
+            }
+            & .btn {
+                padding: 0 65px;
+                margin-top: 20px;
+            }
+        }
+        & .features-content-wrap {
+            padding-top: 40px;
+
+            & .single-item{
+                display: flex;
+                padding-bottom: 45px;
+                background: $white;
+                @media #{$laptop-device} {
+                    padding: 40px;
+                }
+                @media #{$desktop-device} {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                & .features-icon {
+                    &::before {
+                        z-index: 0;
+                    }
+
+                    & img {
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+                & .features-content {
+                    flex: 1;
+                    margin-left: 30px;
+                    @media #{$desktop-device} {
+                        margin-left: 0;
+                    }
+
+                    & .title {
+                        margin-top: 0;
+                        @media #{$laptop-device} {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Home Style Five
+
+.features-section-7 {
+    padding-bottom: 145px;
+    
+    & .features-wrap {
+
+        & .features-img-wrap {
+            display: flex;
+
+            & .features-img {
+
+                & img {
+                    border-radius: 5px;
+                }
+                &:first-child {
+                    padding-right: 15px;
+                }
+                &:last-child {
+                    padding-left: 15px;
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        & .features-content {
+            padding-left: 112px;
+            & .section-title {
+
+                & .title {
+
+                    & span {
+                        color: $primary;
+                    }
+                }
+            }
+
+            & p {
+                font-size: 16px;
+                line-height: 30px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: #4c4d56;
+                margin-top: 30px;
+            }
+
+            & .features-item-wrap {
+                padding-top: 20px;
+                display: flex;
+                & .col {
+                    position: relative;
+                    padding-right: 20px;
+                    margin-right: 5px;
+
+                    &:last-child  {
+                        padding-right: 0px;
+                        margin-right: 0px; 
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 110px;
+                        width: 1px;
+                        background: #ededed;
+                        transform: translateY(40px);
+                    }
+                    & .features-item {
+                        margin-top: 30px;
+                        & .title {
+                            font-size: 18px;
+                            line-height: 24px;
+                            margin-top: 10px;
+                            @media #{$laptop-device} {
+                                font-size: 17px;
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+.features-section-7 {
+    @media #{$desktop-device} {
+        padding-bottom: 100px;
+
+        & .features-wrap {
+            & .features-content {
+                padding-left: 30px;
+            }
+        }
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+        & .features-wrap {
+            & .features-content {
+                padding-left: 0px;
+                margin-top: 50px;
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px; 
+    }
+    @media #{$small-mobile} {
+        & .features-wrap {
+            & .features-img-wrap {
+                flex-direction: column;
+                text-align: center;
+    
+                & .features-img {
+    
+                    &:first-child {
+                        padding-right: 0;
+                    }
+                    &:last-child {
+                        padding-left: 0px;
+                    }
+                }
+            }
+            & .features-content {
+    
+                & .features-item-wrap {
+                    flex-direction: column;
+                    & .col {
+                        padding-right: 0;
+                        margin-right: 0;
+    
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

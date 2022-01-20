@@ -1,0 +1,279 @@
+/*--
+/*  08. Case Study CSS
+/*----------------------------------------*/
+
+// Case Study Section
+.case-study-section {
+    overflow: hidden;
+}
+
+// Case Study Wrap
+.case-study-wrap {
+    margin-top: -10px;
+}
+// Case Study Slider Wrap
+.case-study-slider-wrap {
+    margin-top: 90px;
+    @media #{$tablet-device} {
+        margin-top: 60px;
+    }
+    & .single-case-study {
+        display: flex;
+        align-items: end;
+        max-width: 1070px;
+        height: 550px;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, #FFFFFF00 0%, #010f31 100%);
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @media #{$tablet-device} {
+            height: 450px;
+        }
+        & .case-study-content {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            padding: 90px;
+            gap: 50px;
+            display: none;
+            @media #{$medium-device} {
+                padding: 40px;
+            }
+            @media #{$laptop-device} {
+                flex-direction: column;
+                gap: 30px;
+                padding: 50px;
+            }
+
+            & .case-study-title {
+                flex-shrink: 0;
+                & .title {
+                    font-size: 30px;
+                    line-height: 30px;
+                    color: $white;
+                    @media #{$large-mobile} {
+                        font-size: 22px;
+                    }
+                }
+                & span {
+                    font-size: 18px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-family: 400;
+                    color: $primary;
+                    @media #{$large-mobile} {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            & .case-study-text {
+                flex-grow: 1;
+
+                & p {
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-family: 400;
+                    color: $white;
+                }
+            }
+            & .case-study-link {
+                text-align: right;
+                flex-grow: 1;
+                @media #{$laptop-device} {
+                    text-align: left;
+                }
+                & a {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 15px;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: inline-block;
+                    background: $primary;
+                    color: $white;
+                    transition: $transition-default;
+
+                    &:hover {
+                        background: $white;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    & .swiper-slide {
+
+        &.swiper-slide-active {
+            & .single-case-study {
+                & .case-study-content {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+// Case Study Button
+.case-study-btn {
+    margin-top: 60px;
+    & .btn {
+        font-size: 14px;
+        padding: 0 35px;
+        height: 50px;
+        line-height: 46px;
+    }
+}
+// Case Study Arrow
+.case-study-active {
+    & .case-study-arrow  {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        background: $white;
+        box-shadow: 0px 5px 57px 0px rgba(0, 0, 0, 0.15);
+        color: $primary;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-default;
+        @media #{$tablet-device} {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        &.swiper-button-prev {
+            left: 20%;
+            &::after {
+                content: "\f16d";
+                font-family: flaticon !important;
+                font-size: 20px;
+            }
+        }
+        &.swiper-button-next {
+            right: 20%;
+            &::after {
+                content: "\f16e";
+                font-family: flaticon !important;
+                font-size: 20px;
+            }
+        }
+        &:hover {
+            color: $white;
+            background: $primary;
+        }
+    }
+    &:hover {
+        & .case-study-arrow {
+            opacity: 1;
+            visibility: visible;
+            &.swiper-button-prev {
+                left: 23%;
+                @media #{$desktop-device} {
+                    left: 22%;
+                }
+                @media #{$tablet-device} {
+                    left: 30px;
+                }
+            }
+            &.swiper-button-next {
+                right: 23%;
+                @media #{$desktop-device} {
+                    right: 22%;
+                }
+                @media #{$tablet-device} {
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+// Home Style Six
+
+.case-study-section-2 {
+    background: #fbfbfc;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    & .case-study-wrap {
+
+        & .case-study-content-wrap {
+            padding-top: 35px;
+            @media #{$tablet-device} {
+                padding-top: 10px;
+            }
+            & .case-study-item {
+                background: $white;
+                box-shadow: 0px 0px 131px 0px rgba(0, 0, 0, 0.09);
+                border-radius: 10px;
+                margin-top: 30px;
+                
+                & .case-study-img {
+                    padding: 30px;
+                    @media #{$desktop-device} {
+                        padding: 25px;
+                    }
+                    & a {
+                        display: block;
+                        & img {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+                & .case-study-content {
+                    padding: 0 30px 35px;
+                    margin-top: -10px;
+                    @media #{$desktop-device} {
+                        padding: 0 25px 30px;
+                    }
+
+                    & .title {
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #3e3e3e;
+                    }
+
+                    & span {
+                        font-size: 18px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

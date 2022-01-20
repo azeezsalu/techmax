@@ -1,0 +1,230 @@
+/*--
+/*  23 - Overview CSS
+/*----------------------------------------*/
+
+// Overview Section
+.overview-section {
+
+    & .overview-wrap {
+
+        & .overview-img {
+
+            & .image {
+                animation: round-01 5s linear infinite;
+            }
+        }
+
+        & .overview-content {
+            padding-left: 95px;
+            padding-top: 65px;
+            @media #{$desktop-device} {
+                padding-left: 50px;
+                padding-top: 0;
+            }
+            @media #{$tablet-device} {
+                padding-left: 0px;
+                margin-top: 60px;
+            }
+            & .section-title {
+
+                & .title {
+                    font-size: 48px;
+                    line-height: 60px;
+                    @media #{$desktop-device} {
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                    @media #{$large-mobile} {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+            }
+
+            & .overview-list {
+                padding-top: 40px;
+                & ul {
+
+                    & li {
+                        display: flex;
+                        align-items: flex-start;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $heading-color1;
+                        & .overview-icon {
+                            color: $secondary-2;
+                            margin-right: 8px;
+                        }
+                        & + li {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+
+            & .btn {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@keyframes round-01 {
+
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+
+// Overview Section-2
+.overview-section-2 {
+
+    & .overview-wrap {
+
+        & .overview-content {
+            padding-right: 95px;
+            padding-top: 65px;
+            @media #{$laptop-device} {
+                padding-top: 50px;
+                padding-right: 30px;
+            }
+            
+            & .section-title {
+
+                & .title {
+                    font-size: 48px;
+                    line-height: 60px;
+                }
+            }
+
+            & .text {
+                font-size: 16px;
+                line-height: 30px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: #4c4d56;
+                margin-top: 40px;
+                padding-right: 115px;
+            }
+
+            & .counter-wrap {
+                display: flex;
+                padding-top: 50px;
+                & .counter-item {
+
+                    &:last-child {
+                        margin-left: 95px;
+                    }
+                    & span {
+                        font-size: 50px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $primary;
+                    }
+                    & p {
+                        font-size: 14px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 400;
+                        color: #4c4d56;
+                    }
+                }
+            }
+        }
+
+        & .overview-img {
+            padding: 0 25px;
+            position: relative;
+            z-index: 1;
+
+            & .shape {
+                position: absolute;
+                left: 60px;
+                top: 30px;
+                z-index: -1;
+                max-width: 560px;
+                animation: round-01 5s linear infinite;
+            }
+        }
+
+    }
+}
+
+.overview-section-2 {
+    @media #{$desktop-device} {
+        & .overview-wrap {
+
+            & .overview-content {
+                padding-top: 0;
+                padding-right: 50px;
+                
+                & .section-title {
+    
+                    & .title {
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                }
+    
+                & .text {
+                    padding-right: 0;
+                }
+    
+                & .counter-wrap {
+                    padding-top: 40px;
+                }
+            }
+    
+            & .overview-img {
+                padding: 0 10px;
+            }
+    
+        }
+    }
+    @media #{$tablet-device} {
+        & .overview-wrap {
+
+            & .overview-img {
+                padding: 0 40px;  
+                margin-top: 60px;
+    
+                & .shape {
+                    left: 90px;
+                    top: 35px;
+                }
+            }
+        }
+    }
+    @media #{$large-mobile} {
+        & .overview-wrap {
+            & .overview-content {
+                & .section-title {
+
+                    & .title {
+                        font-size: 28px;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$small-mobile} {
+        & .overview-wrap {
+
+            & .overview-img {
+                padding: 0 20px;  
+            }
+        }
+    }
+}

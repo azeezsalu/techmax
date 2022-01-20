@@ -1,0 +1,232 @@
+/*--
+/*  07 - Counter CSS
+/*----------------------------------------*/
+
+// Counter Section
+.counter-section {
+    padding-top: 100px;
+    padding-bottom: 140px;
+    background: $secondary;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @media #{$desktop-device} {
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    & .counter-wrap {
+
+        & .counter-item {
+            margin-top: 30px;
+            & .counter-icon {
+                margin-bottom: 30px;
+            }
+            & .counter-text {
+
+                & span {
+                    font-size: 50px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 700;
+                    color: $white;
+                    @media #{$large-mobile} {
+                        font-size: 40px;
+                    }
+                }
+                & p {
+                    font-size: 14px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 400;
+                    color: $white; 
+                }
+            }
+        }
+    }
+}
+
+// Home Style Three
+
+// Counter Section-2
+.counter-section-2 {
+    background: $primary-2;
+    padding-bottom: 100px;
+    @media #{$desktop-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 60px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 40px;
+    }
+    & .counter-wrap {
+
+        & .counter-item {
+            display: flex;
+
+            & .counter-icon {
+
+            }
+            & .counter-text {
+                flex: 1;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+// Home Style Five
+
+.counter-section-3 {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @media #{$desktop-device} {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    & .experience-content {
+        display: flex;
+        align-items: center;
+        @media #{$large-mobile} {
+           display: block;
+        }
+        & .experience {
+            margin-top: 20px;
+            & .number {
+                font-size: 150px;
+                line-height: 30px;
+                color: $primary;
+                @media #{$laptop-device} {
+                    font-size: 110px;
+                }
+                @media #{$large-mobile} {
+                    font-size: 90px;
+                }
+            }
+            & span {
+                font-size: 24px;
+                line-height: 38px;
+                font-family: $heading-font;
+                font-weight: 400;
+                color: $heading-color1;
+                display: block;
+                margin-top: 60px;
+                @media #{$laptop-device} {
+                    font-size: 20px;
+                    margin-top: 35px;
+                }
+            }
+        }
+        & .experience-text {
+            padding-left: 70px;
+            padding-right: 20px;
+            @media #{$desktop-device} {
+                padding-left: 18px;
+                padding-right: 0;
+            }
+            @media #{$large-mobile} {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+            & .title {
+                font-size: 36px;
+                line-height: 48px;
+                color: $heading-color1;
+                @media #{$large-mobile} {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+
+                & span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    & .service-content {
+        @media #{$tablet-device} {
+            margin-top: 40px;
+        }
+        & .service-list {
+            & li {
+                border-bottom: 1px solid $primary;
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                & a {
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-family: $heading-font;
+                    font-weight: 700;
+                    color: $heading-color1;
+                    @media #{$small-mobile} {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        color: $primary;
+                        & i {
+                            transform: translateX(20px);
+                        }
+                    }
+
+                    & i {
+                        transform: translateX(15px);
+                        transition: $transition-default;
+                    }
+                }
+            }
+        }
+    }
+
+    & .counter-wrap {
+        padding-top: 50px;
+        & .counter-item {
+            background: $white;
+            padding: 29px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            @media #{$desktop-device} {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            & .counter-text {
+                @media #{$desktop-device} {
+                    margin-left: 0;
+                }
+                & span {
+                    color: $heading-color1;
+                }
+                & p {
+                    color: #4c4d56;
+                }
+            }
+        }
+    }
+}
+ 

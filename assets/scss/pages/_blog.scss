@@ -1,0 +1,270 @@
+/*--
+/*  12 - Blog CSS
+/*----------------------------------------*/
+
+// Blog Section
+.blog-section {
+
+    & .blog-wrap {
+        margin-top: -10px;
+        & .blog-content-wrap {
+            padding-top: 35px;
+        }
+    }
+}
+
+// Single Blog
+.single-blog {
+    background: $white;
+    box-shadow: 0px 0px 98px 0px rgba(0, 0, 0, 0.07);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: 30px;
+    
+    & .blog-img {
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        & a {
+            display: block;
+            & img {
+                width: 100%;
+                transition: $transition-default; 
+            }
+        }
+        & .top-meta {
+            position: absolute;
+            top: 35px;
+            left: 30px;
+            & .date {
+                width: 65px;
+                height: 65px;
+                line-height: 65px;
+                text-align: center;
+                background-image: linear-gradient( 120deg, rgb(84,214,235) 0%, rgb(3,92,221) 100%);
+                color: #fff;
+                font-size: 14px;
+                line-height: 18px;
+                border-radius: 5px;
+                font-family: $heading-font;
+                display: inline-block;
+                text-align: center;
+                line-height: 12px;
+                padding: 10px;
+                & span {
+                    font-size: 28px;
+                    line-height: 18px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    display: block;
+                }
+            }
+        }
+    }
+    & .blog-content {
+        padding: 40px;
+        @media #{$tablet-device}{
+            padding: 35px;
+        }
+        @media #{$small-mobile}{
+            padding: 35px 24px;
+        }
+
+        &  .blog-meta {
+
+            & span {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $heading-font;
+                font-weight: 600;
+                color: #999999;
+                margin-right: 15px;
+                @media #{$small-mobile}{
+                    margin-right: 12px;
+                }
+
+                &  i {
+                    color: $primary;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        & .title {
+            font-size: 22px;
+            line-height: 30px;
+            color: $heading-color1;
+            padding-right: 15px;
+            margin-top: 15px;
+        }
+
+        & p {
+            font-size: 14px;
+            line-height: 26px;
+            font-family: $heading-font;
+            font-weight: 400;
+            color: #4c4d56;
+            margin-top: 10px;
+        }
+    }
+    & .blog-btn {
+        border-top: 1px solid #ebebeb;
+        padding: 15px 40px;
+
+        & .blog-btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            font-family: $heading-font;
+            font-weight: 600;
+            color: $primary;
+            transition: $transition-default;
+
+            & i {
+                transition: $transition-default; 
+            }
+
+            &:hover {
+                & i {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+
+    &:hover {
+       & .blog-img {
+            & a {
+                & img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+ 
+// Home Style Three
+
+// Blog Section-2
+.blog-section-2 {
+    padding-bottom: 120px;
+    @media #{$desktop-device} {
+        padding-bottom: 100px;
+    }
+    @media #{$tablet-device} {
+        padding-bottom: 80px;
+    }
+    @media #{$large-mobile} {
+        padding-bottom: 60px;
+    }
+    & .blog-wrap {
+
+        & .section-title {
+
+            & .sub-title {
+                color: $primary-2;
+            }
+        }
+        & .blog-content-wrap {
+            & .single-blog { 
+                & .blog-img {
+                    & .top-meta {
+                        & .date {
+                            background: $primary-2;
+                            & span {
+                            }
+                        }
+                    }
+                }
+                & .blog-content {
+    
+                    &  .blog-meta {
+    
+                        & span {
+                            & a {
+
+                                &:hover {
+                                    color: $primary-2;
+                                }
+                            }
+                            &  i {
+                                color: $primary-2;
+                            }
+                        }
+                    }
+    
+                    & .title {
+                        
+                        & a {
+                            
+                            &:hover {
+                                color: $primary-2;
+                            }
+                        }
+                    }
+    
+                    & p {
+                    }
+                }
+                & .blog-btn {
+    
+                    & .blog-btn-link {
+                        color: $primary-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Home style Four
+
+.blog-section-3 {
+
+    & .blog-content-wrap {
+
+        & .single-blog {
+            position: relative;
+
+            & .blog-img {
+                border-radius: 10px;
+            }
+            & .blog-content {
+                background: none;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                @media #{$desktop-device}{
+                    padding: 35px 20px;
+                }
+                @media #{$large-mobile}{
+                    padding: 40px;
+                }
+                @media #{$small-mobile}{
+                    padding: 35px 25px;
+                }
+
+                & .blog-meta {
+
+                    & span {
+                        color: $white;
+                    }
+                }
+                & .title {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+ 
+// Blog Grid Wrap
+.blog-grid-wrap {
+    margin-top: -30px;
+
+    & .pagination {
+        margin-top: 70px;
+    }
+}

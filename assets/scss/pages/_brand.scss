@@ -1,0 +1,80 @@
+/*--
+/*  13 - Brand CSS
+/*----------------------------------------*/
+
+// Brand Wrapper 
+.brand-wrapper{
+          
+}
+
+// Brand Title
+.brand-title{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: $heading-font;
+    color: #717171;
+    margin-top: -7px;
+    @media #{$small-mobile}{
+        font-size: 20px;
+    }
+
+    & span{
+        color: $primary;
+        font-weight: 700;
+    }
+}
+
+// Brand Active
+.brand-active{
+    max-width: 1070px;
+    width: 100%;
+    margin: 45px auto 0;
+}
+
+
+// Home Style Two
+
+.Brand-section-2 {
+
+    & .brand-wrapper-2 {
+        background: $white;
+        box-shadow: 0px 0px 144px 0px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        position: relative;
+        margin-bottom: -150px;
+        z-index: 1;
+    }
+}
+
+// Home Style Three
+
+.Brand-section-3 {
+
+    & .brand-wrapper {
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 120px;
+        @media #{$desktop-device} {
+            padding-bottom: 100px;
+        }
+        @media #{$tablet-device} {
+            padding-bottom: 80px;
+        }
+        @media #{$large-mobile} {
+            padding-bottom: 60px;
+        }
+        & .brand-title {
+
+            & span {
+                color: $primary-2;
+            }
+        }
+    }
+}
+
+// Home Style Four
+
+.Brand-section-4 {
+    background: #fbfbfc;
+}

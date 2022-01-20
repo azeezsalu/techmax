@@ -1,0 +1,336 @@
+/*--
+/*  19 - Contact CSS
+/*----------------------------------------*/
+
+// Contact Section
+.contact-section {
+    background: $primary-2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    & .contact-wrap {
+
+        & .contact-info {
+            max-width: 410px;
+            & .info-title {
+                font-size: 40px;
+                line-height: 54px;
+                color: $white;
+                @media #{$desktop-device} {
+                    font-size: 34px;
+                    line-height: 48px;
+                }
+                @media #{$small-mobile} {
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+            }
+
+            & ul {
+                padding-top: 15px;
+                & li {
+                    border-top: 1px solid $white;
+                    margin-top: 15px;
+                    padding-top: 15px;
+
+                    &:first-child {
+                        border-top: 0;
+                    }
+                    & .contact-info-item {
+
+                        & .contact-info-icon {
+
+                            & i {
+                                font-size: 50px;
+                                color: $white;
+                                @media #{$small-mobile} {
+                                    font-size: 42px;
+                                }
+                            }
+                        }
+                        & .contact-info-text {
+                            margin-left: 20px;
+                            & .title {
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: $white;
+                            }
+                            & p {
+                                font-size: 15px;
+                                line-height: 30px;
+                                font-family: $heading-font;
+                                font-weight: 400;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .contact-form {
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-left: 110px;
+            @media #{$desktop-device} {
+                margin-left: 15px;
+            }
+            @media #{$tablet-device} {
+                margin-left: 0;
+                margin-top: 60px;
+            }
+            & .contact-form-wrap {
+                padding: 60px;
+                @media #{$desktop-device} {
+                    padding: 40px;
+                }
+                & .heading-wrap {
+                    margin-bottom: 30px;
+                    & .sub-title {
+                        font-size: 14px;
+                        line-height: 30px;
+                        font-family: $heading-font;
+                        font-weight: 800;
+                        text-transform: uppercase;
+                        color: $primary-2;
+                    }
+                    & .title {
+                        font-size: 42px;
+                        line-height: 54px;
+                        font-family: $heading-font;
+                        font-weight: 700;
+                        color: $heading-color1;
+                        @media #{$desktop-device} {
+                            font-size: 32px;
+                            line-height: 48px;
+                        }
+                        @media #{$small-mobile} {
+                            font-size: 28px;
+                            line-height: 40px;
+                        }
+                    }
+                }
+                & .single-form {
+                    margin-top: 25px;
+                    & input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+                        height: 55px;
+                        line-height: 55px;
+                        border: 1px solid #ebebeb;
+                        padding-left: 15px;
+    
+                        @include placeholder{
+                            opacity: 0.95;
+                            font-size: 14px;
+                            color: #4c4d56;
+                            font-family: $heading-font;
+                            font-weight: 400;
+                        }
+                    }
+                    & textarea {
+                        height: 135px;
+                        border: 1px solid #ebebeb;
+                        padding-left: 15px;
+                        resize: none;
+    
+                        @include placeholder{
+                            opacity: 0.95;
+                            font-size: 14px;
+                            color: #4c4d56;
+                            font-family: $heading-font;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                & .form-btn {
+                    margin-top: 25px;
+                    & .btn {
+                        font-size: 16px;
+                        width: 100%;
+                        height: 55px;
+                        line-height: 50px;
+                        margin-bottom: 10px;
+                        @media #{$small-mobile} {
+                            padding: 0 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+// Contact Info Wrap
+.contact-info-section {
+
+    & .contact-info-wrap {
+        margin-top: -10px;
+        @media #{$desktop-device} {
+            margin-top: -30px;
+        }
+        & .single-contact-info {
+            background: $white;
+            box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.11);
+            padding: 55px;
+            border-radius: 10px;
+            margin-top: 70px;
+            @media #{$desktop-device} {
+                padding: 40px;
+            }
+            & .info-icon {
+                    width: 100px;
+                    height: 100px;
+                    line-height: 103px;
+                    background: $primary;
+                    color: $white;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    margin-top: -115px;
+                    @media #{$desktop-device} {
+                        width: 80px;
+                        height: 80px;
+                        line-height: 80px;
+                        margin-top: -80px;
+                    }
+
+                & i {
+                    font-size: 40px;
+                    @media #{$desktop-device} {
+                        font-size: 30px;
+                    }  
+                }
+            }
+            & .info-content {
+
+                & .title {
+                    font-size: 18px;
+                    line-height: 36px;
+                    color: $heading-color1;
+                    margin-top: 15px;
+                    
+                }
+                & p {
+                    font-size: 22px;
+                    line-height: 36px;
+                    font-family: $heading-font;
+                    font-weight: 700;
+                    color: $primary;
+                    text-decoration: underline;
+                    text-decoration-color: #7faeef;
+                    @media #{$desktop-device} {
+                        font-size: 16px;
+                    }
+                    @media #{$tablet-device} {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Contact Form Section
+.contact-form-section {
+
+    & .contact-wrap {
+        margin-top: -10px;
+        & .form-title {
+
+            & .title {
+                font-size: 36px;
+                line-height: 48px;
+                font-weight: 600;
+                color: $heading-color1;
+                @media #{$tablet-device} {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media #{$small-mobile} {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        & .contact-form-wrap {
+            padding-top: 30px;
+            & .single-form {
+                margin-top: 20px;
+                & .form-control {
+                    border: 1px solid transparent;
+                    background: #f6f7f9;
+                    border-radius: 0;
+                    @include placeholder{
+                        opacity: 0.95;
+                        font-size: 14px;
+                        font-family: $heading-font;
+                        color: #787884;
+                        font-weight: 400;
+                    }
+                    &:focus{
+                        outline: none;
+                        border-color: $primary;
+                    }
+                }
+                & textarea {
+                    &.form-control {
+                        height: 135px;
+                        font-size: 13px;
+                        color: #415674;
+                        font-weight: 600;
+                        padding: 10px 25px;
+                        padding-top: 15px;
+                        resize: none;
+                        &:focus{
+                            outline: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+            & .form-btn {
+
+                & .btn {
+                    height: 45px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    padding: 0 30px;
+                    margin-top: 35px;
+                }
+            }
+        }
+    }
+}
+
+// Contact Map
+.contact-map-section {
+
+    & .contact-map-wrap {
+        margin-bottom: -7px;
+    
+        & iframe {
+            height: 550px;
+            width: 100%;
+            filter: brightness( 100% ) contrast( 100% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+        }
+    }
+}
+
+// Contact Section-2
+.contact-section-2 {
+
+    & .contact-wrap {
+
+        & .contact-form {
+
+            & .contact-form-wrap {
+
+                & .heading-wrap {
+        
+                    & .sub-title {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
